@@ -1,0 +1,304 @@
+@keyframes deplacementlogo {
+    0% {
+        transform: translateX(0%);
+        }
+
+    100% {
+        transform: translateX(195%);
+        }
+    }
+
+.carousel-page
+    {
+    width:100%;
+    height:400px;
+    background-color:#5f666d;
+    color:white;
+    }   
+
+html,
+body {
+	font-family: sans-serif;
+	/*background-color: green;*/
+	background: linear-gradient(#34afce,#34afce);
+}
+
+.container {
+	width: 100%;
+	padding-right: 5px;
+	padding-left: 5px;
+	margin-right:auto;
+	margin-left:auto;
+	background-color: #34afce;
+}
+
+
+ul {
+  list-style-type: none;
+  margin:  0;
+  padding: 0;
+  background-color: #000;
+}
+
+header {
+	background-color: #FFF;
+}
+
+li {
+  display: inline;
+}
+li a {
+	color : #FFF;
+}
+
+hr {
+	background: #000;
+}
+
+section {
+	float:left;
+	left: 1%;
+	width: 100%;
+	height:auto;
+	background: #FFF;*/
+}
+
+	aside {
+	float:right;
+	margin:1.4em;
+	right: 1%;
+	width: 100%;
+	height:23.6em;
+	background-color: #CCC;
+}
+
+button {
+	margin: 10px;
+}
+
+footer > ul {
+	background-color: #343A40;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size : 20px;
+	 }
+
+	aside {
+ 	visibility : hidden ! important ;
+ 	}
+
+}
+
+h1, h2, h3 {
+	text-align:center;
+}
+
+table > caption {
+  caption-side: top;
+ text: center;
+
+}
+
+/* Déplacement des objets */
+
+.slidein {
+    animation-duration: 20s;
+    animation-name: slidein;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left:100%;
+      width:300%
+    }
+    
+    to {
+      margin-left:0%;
+      width:100%;
+    }
+  }
+  
+  
+  #div
+  {
+      width: 200px;
+      height: 150px;
+      background-color: blue;
+      transition-property: background-color; /* Active la transition sur background-color */
+      transition-duration: 1s; /* La transition dure 1s */
+  }
+  
+  #div:hover
+  {
+      background-color: green;
+  }
+  
+  #div
+  {
+      width: 200px;
+      height: 150px;
+      background-color: blue;
+      transition-property: transform;
+      transition-duration: 1s;
+      transition-timing-function: ease; /* Transition de type ease */ 
+  }
+  
+  #div:hover
+  {
+      transform: translateX(200px); /* On déplace l'objet */
+  }
+  
+  @keyframes deplacementlogo {
+      0% {
+          transform: translateX(0%);
+          }
+          
+      100% {
+          transform: translateX(195%);
+          }
+      }
+  
+      p {
+          animation-duration: 3s;
+          animation-name: slidein;
+          animation-iteration-count: infinite;
+        }
+  
+        p {
+          animation-duration: 3s;
+          animation-name: slidein;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+  
+        @-webkit-keyframes redBox {
+          0% {
+            left: 10px;
+          }
+          50% {
+            left: 400px;
+          }
+          100% {
+            left: 10px;
+          }
+        }
+        @-moz-keyframes redBox {
+          0% {
+            left: 10px;
+          }
+          50% {
+            left: 400px;
+          }
+          100% {
+            left: 10px;
+          }
+        }
+        @keyframes redBox {
+          0% {
+            left: 10px;
+          }
+          50% {
+            left: 400px;
+          }
+          100% {
+            left: 10px;
+          }
+        }
+  
+    #boite {
+          background-color: red;
+          position: relative;
+          width: 100px;
+          height: 100px;
+          -webkit-animation-name: redBox;
+          -webkit-animation-duration: 5s;
+          -webkit-animation-iteration-count: infinite;
+          -moz-animation-name: redBox;
+          -moz-animation-duration: 5s;
+          -moz-animation-iteration-count: infinite;
+          animation-name: redBox;
+          animation-duration: 5s;
+          animation-iteration-count: infinite;
+        }
+
+/*
+table {
+	background:#666;
+	border-collapse:collapse;
+	width:100%;
+}
+th {
+	color:white;
+}
+th, td {
+	text-align:center;
+	padding:5px;
+	border-right:1px solid black;
+}
+th:last-child, td:last-child {
+	border-right:0;
+}
+tbody tr:nth-child(odd) {
+	background:#ccc;
+}
+tbody tr:nth-child(even) {
+	background:#aaa;
+}
+@media screen and (max-width:800px) {
+	table {
+		display:flex;
+	}
+	thead {
+		width:20%;
+		min-width:90px;
+	}
+	tbody {
+		flex:1;
+	}
+	tr {
+		display:flex;
+		flex-direction:column;
+	}
+	th, td {
+		text-align:left;
+		border-right:0;
+		border-bottom:1px solid black;
+	}
+	tr:last-child td:last-child {
+		border-bottom:0;
+	}
+	tbody tr:not(:first-child) td::before {
+		position:absolute;
+		content:'Pseudo';
+		color:white;
+		font-weight:bold;
+		width:calc(20% - 13px);
+		min-width:90px;
+		padding:5px;
+		border-bottom:1px solid black;
+		margin-left:calc(-20% - 2px);
+		margin-top:-5px;
+	}
+	tbody tr:last-child td:last-child::before {
+		border-bottom:0;
+	}
+	tbody tr:not(:first-child) td:nth-of-type(2)::before {
+		content:'Age';
+	}
+	tbody tr:not(:first-child) td:nth-of-type(3)::before {
+		content:'Classement';
+	}
+
+}
+@media screen and (max-width:461px) {
+	tbody tr:not(:first-child) td::before {
+		margin-left:-95px;
+	}
+}
+*/

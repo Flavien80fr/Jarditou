@@ -1,0 +1,7 @@
+<?php
+echo site_url(); // http://localhost/ci/index.php
+
+echo '<a href="<?= site_url("produits/modifier/".$produits->id); ?>">
+  Modifier
+</a>' 
+?>
